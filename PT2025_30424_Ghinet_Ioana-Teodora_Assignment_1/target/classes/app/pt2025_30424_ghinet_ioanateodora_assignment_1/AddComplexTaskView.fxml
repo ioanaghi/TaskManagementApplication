@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #fdfaf6; -fx-border-color: #0d4715; -fx-border-width: 7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.pt2025_30424_ghinet_ioanateodora_assignment_1.PresentationLayer.AddComplexTaskController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="400.0" spacing="45.0">
+            <children>
+                <Label alignment="CENTER" text="Add Complex Task">
+                    <font>
+                        <Font name="System Bold Italic" size="36.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER" layoutX="50.0" layoutY="335.0" prefHeight="45.0" prefWidth="200.0" spacing="20.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="46.0" text="ID">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="taskIdField" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" promptText="0000" style="-fx-background-color: #98b195; -fx-background-radius: 50;" />
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="50.0" layoutY="237.0" prefHeight="45.0" prefWidth="349.0" spacing="20.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="58.0" text="Status">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <ChoiceBox fx:id="statusChoiceBox" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #98b195; -fx-background-radius: 50;">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Not Completed" />
+                                    <String fx:value="Completed" />
+                                </FXCollections>
+                            </items>
+                        </ChoiceBox>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+                <Button fx:id="doneButton" mnemonicParsing="false" onAction="#handleDone" prefHeight="50.0" prefWidth="225.0" style="-fx-background-color: #fb8538; -fx-background-radius: 50;" text="Done">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
